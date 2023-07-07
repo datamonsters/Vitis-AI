@@ -17,6 +17,7 @@ help:
 
 github:
 	@$(BUILD_MODEL_CARDS)
+	@make clean
 	@make html
 	@cp -a build/html/. ../docs
 
