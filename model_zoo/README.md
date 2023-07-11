@@ -18,7 +18,7 @@ Vitis-AI/model_zoo
 ├── model-list                      # list of all availible models with yaml configuration
 ├── models                          # model cards with code and all details 
 │ ├── super_resolution              # task name
-│ │ ├── pt_DRUNet                   # model name
+│ │ ├── pt_OFA-RCAN                   # model name
 │ │ │ ├── config.env                # model configuration - env variables
 │ │ │ ├── artifacts                 # artifacts - will be created during the inference process
 │ │ │ │ ├── inference               # folder with results values of inference and evaluation
@@ -93,7 +93,7 @@ path to the model:
    # <application> - type or application of the model
    # <model name> - the name of the specific model
    # Example:
-   MODEL_FOLDER="$(pwd)"/model_zoo/models/super_resolution/pt_DRUNet
+   MODEL_FOLDER="$(pwd)"/model_zoo/models/super_resolution/pt_OFA-RCAN
    ```
 4. Download model files for the specific device and device configuration:  
    ```
@@ -102,18 +102,18 @@ path to the model:
    # A command line interface will be provided for downloading model files
    # In the first input you need to specify the base framework and the specific model name.
    # Example of the first input:
-   # input: pt drunet
+   # input: pt 37
    # Then select the desired device configuration.
    # Example of the second input:
-   # input num: 7
+   # input num: 3
    # As a result you will download the .tar.gz archive with model files.
-   # Example: drunet_pt-vck5000-DPUCVDX8H-8pe-r3.0.0.tar.gz
+   # Example: ofa_rcan_latency_pt-v70-DPUCV2DX8G-r3.5.0.tar.gz
    ```
 5. Move and unzip the downloaded model: 
    ``` 
    # Example
-   mv drunet_pt-vck5000-DPUCVDX8H-8pe-r3.0.0.tar.gz $MODEL_FOLDER/artifacts/models/
-   tar -xzvf $MODEL_FOLDER/artifacts/models/drunet_pt-vck5000-DPUCVDX8H-8pe-r3.0.0.tar.gz -C $MODEL_FOLDER/artifacts/models/
+   mv ofa_rcan_latency_pt-v70-DPUCV2DX8G-r3.5.0.tar.gz $MODEL_FOLDER/artifacts/models/
+   tar -xzvf $MODEL_FOLDER/artifacts/models/ofa_rcan_latency_pt-v70-DPUCV2DX8G-r3.5.0.tar.gz -C $MODEL_FOLDER/artifacts/models/
    ```
 6. Set environment variables for a specific device and device configuration inside the docker container:  
    ```
@@ -122,7 +122,7 @@ path to the model:
    # <DEVICE_NAME> - the name of current device
    # <DEVICE_CONFIGURATION> - selected device configuration
    # Example:
-   source /vitis_ai_home/board_setup/vck5000/setup.sh DPUCVDX8H_8pe_normal
+   source /vitis_ai_home/board_setup/v70/setup.sh DPUCVDX8H_8pe_normal
    ```
 7. Go to the specific model's folder inside the `model_zoo`:  
    ```
@@ -137,12 +137,12 @@ path to the model:
    # Alternatively, you can pass --dataset option with the folder where images for the inference are stored.
    # Example 1:
    bash scripts/inference.sh \
-       $MODEL_FOLDER/artifacts/models/drunet_pt/drunet_pt.xmodel \
+       $MODEL_FOLDER/artifacts/models/ofa_rcan_latency_pt/ofa_rcan_latency_pt.xmodel \
        /workspace/Vitis-AI-Library/samples/rcan/images/1.png /workspace/Vitis-AI-Library/samples/rcan/images/2.png \
        /workspace/Vitis-AI-Library/samples/rcan/images/3.png
    # Example 2: 
    bash scripts/inference.sh \
-       $MODEL_FOLDER/artifacts/models/drunet_pt/drunet_pt.xmodel \
+       $MODEL_FOLDER/artifacts/models/ofa_rcan_latency_pt/ofa_rcan_latency_pt.xmodel \
        --dataset /workspace/Vitis-AI-Library/samples/rcan/images
    ```
 9. Results of the inference will be stored in the folder: `artifacts/inference`.
@@ -173,7 +173,7 @@ To run the Vaitrace, use:
    # The report files will be stored in the $MODEL_FOLDER/artifacts/inference/vaitrace folder
    # Example: 
    
-   bash scripts/vaitrace.sh $MODEL_FOLDER/artifacts/models/drunet_pt/drunet_pt.xmodel /workspace/Vitis-AI-Library/samples/rcan/images/2.png
+   bash scripts/vaitrace.sh $MODEL_FOLDER/artifacts/models/ofa_rcan_latency_pt/ofa_rcan_latency_pt.xmodel /workspace/Vitis-AI-Library/samples/rcan/images/2.png
    ```
 
 

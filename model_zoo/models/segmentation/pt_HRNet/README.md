@@ -20,19 +20,19 @@
 # Model Description
 
 ## Description
-
-SemanticFPN (Semantic Feature Pyramid Network) is a widely used model in the task of semantic segmentation.
-
+HRNet is a deep learning model designed for visual recognition tasks such as object detection and segmentation. 
 ## Paper
 
- Shifeng Zhang, Longyin Wen, et al. "Semantic Feature Pyramid for Real-Time Semantic Segmentation.", 2018.
+ Wang, Jingdong, et al. "Deep high-resolution representation learning for visual recognition." 
+ IEEE transactions on pattern analysis and machine intelligence 43.10 (2020): 3349-3364. 
+ Link: https://arxiv.org/abs/1908.07919v2
 
 # Model Architecture
-The Semantic FPN model builds upon the Feature Pyramid Network (FPN) by incorporating a top-down pathway and lateral connections.
-It combines multi-scale spatial details with semantic information, allowing for better integration of context and 
-improved accuracy in semantic segmentation tasks. By leveraging these architectural enhancements, 
-SemanticFPN achieves more precise object segmentation by propagating semantic information across different scales in the feature pyramid.
-
+HRNet's architecture consists of parallel multi-resolution streams that process the input image at different levels of spatial resolution. 
+Unlike traditional convolutional neural networks that downsample the resolution early in the network, 
+HRNet maintains high-resolution feature maps throughout its processing stages. 
+It employs a high-to-low resolution fusion strategy, where features from lower resolution streams are upsampled 
+and fused with features from higher resolution streams to preserve fine-grained details.
 # Dataset
 
 Dataset for testing: CityScapes. The Cityscapes dataset is a widely used benchmark dataset for semantic understanding of urban street scenes. 
@@ -42,21 +42,12 @@ Link to download the  dataset: https://www.cityscapes-dataset.com/
 
 # Features
 
-The notable features of the SemanticFPN:
+The notable features of the HRNet model:
 
-1. **Strong feature representation**
-    By combining multi-scale features and semantic information, SemanticFPN creates a rich representation that captures 
-    both local details and global context, leading to more robust object segmentation.
-2. **Adaptability to different backbone networks**: 
-    The model can be combined with various backbone networks, such as ResNet or VGGNet, providing flexibility 
-    to choose the most suitable architecture for the specific dataset.
-3. **Transfer learning**: 
-    The pre-trained weights of the backbone network can be used as a starting point for training 
-    the SemanticFPN model, enabling transfer learning and reducing the amount of training data required.
-4. **End-to-end training**:The model can be trained end-to-end, allowing for joint optimization of the backbone network, 
-    FPN, and the semantic segmentation head.
-5. **Real-time performance**: The model is designed to achieve real-time semantic segmentation, making it suitable for 
-    applications that require fast and efficient processing of images or videos.
+1. **Multi-resolution processing**: HRNet processes the input image at multiple resolutions simultaneously, allowing it to capture both global context and fine-grained details.
+2. **High-resolution representation learning**: By maintaining high-resolution feature maps, HRNet preserves fine details that are crucial for accurate visual recognition.
+3. **High-to-low resolution fusion**: HRNet employs a fusion strategy to combine features from different resolution streams, enabling the integration of both local and global information.
+4. **Scale-aware training**: HRNet incorporates scale-aware training techniques to effectively handle objects of different scales, enhancing its ability to detect and segment objects of varying sizes.
 
 # Environment Requirements
 
@@ -78,7 +69,7 @@ Follow the [Quick Start guide](../../../README.md#quick-start) in the main Model
 ## Structure
 
 ```text
-pt_SemanticFPN                # model name  
+pt_HRNet                      # model name  
 ├── artifacts                 # artifacts - will be created during the inference process
 │ ├── inference               # folder with results values of inference and evaluation
 │ │ ├── performance           # model productivity measurements
@@ -133,15 +124,15 @@ Use the following script:
   # Alternatively, you can pass --dataset option with the folder where images are stored.
   # Example:
 
-  bash scripts/performance.sh $MODEL_FOLDER/artifacts/models/SemanticFPN_Mobilenetv2_pt/SemanticFPN_Mobilenetv2_pt.xmodel --dataset /workspace/Vitis-AI-Library/samples/segmentation/images/
+  bash scripts/performance.sh $MODEL_FOLDER/artifacts/models/HRNet_pt/HRNet_pt.xmodel --dataset /workspace/Vitis-AI-Library/samples/segmentation/images/
   ```
 
 
 # Links
 
+- HRNet Architecture (PapersWithCode): https://paperswithcode.com/method/hrnet
 - Cityscapes dataset: https://www.cityscapes-dataset.com/
 - Panoptic Feature Pyramid Networks: https://arxiv.org/abs/1901.02446
-- Going deeper with convolutions (Inception): https://arxiv.org/pdf/1409.4842
 - Semantic segmentation benchmark on the Cityscapes (PapersWithCode): https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes
 
 # Vitis AI Model Zoo Homepage
