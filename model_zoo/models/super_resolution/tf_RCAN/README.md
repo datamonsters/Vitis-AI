@@ -21,39 +21,34 @@
 
 ## Description
 
-A Dilated-Residual U-Net Deep Learning Network for Image Denoising. It combines the strengths of the U-Net architecture
-and dilated convolutions, along with residual connections, to effectively remove noise from images
-while preserving important image details.
+RCAN (Residual Channel Attention Networks) model is a deep learning model designed for single image super-resolution.
 
 ## Paper
 
-Krishna Devalla, Sripad, et al. "DRUNET: A Dilated-Residual U-Net Deep Learning Network to Digitally Stain Optic
-Nerve Head Tissues in Optical Coherence Tomography Images." arXiv e-prints (2018):
-[arXiv-1803](https://arxiv.org/abs/1803.00232).
+Zhang, Yulun, et al. "Residual non-local attention networks for image restoration." 
+arXiv preprint arXiv:1903.10082 (2019). Link: https://arxiv.org/abs/1903.10082
 
 # Model Architecture
 
-A Dilated-Residual U-Net architecture leverages a combination of U-Net structure, dilated convolutions,
-residual connections, and skip connections. This combination enables the model to capture both local and global
-contextual information, propagate gradients effectively, and recover fine details, ultimately leading
-to high-quality image denoising results.
+The architecture of RCAN consists of a deep residual network with multiple residual blocks. 
+Each residual block contains a residual channel attention module (RCAM), which selectively emphasizes informative 
+features and suppresses irrelevant ones. The RCAM operates on feature maps to generate channel attention weights that are
+multiplied with the feature maps to enhance important information.
 
 # Dataset
 
 Dataset for testing: CBSD68. The CBSD68  dataset is a widely used benchmark dataset for image denoising. CBSD stands for "Color and Binary Shape Database".
 It consists of 68 grayscale images with various scenes and objects.
 
-Link to download the  dataset: https://github.com/clausmichele/CBSD68-dataset
+Link to download the dataset: https://github.com/clausmichele/CBSD68-dataset
 
 # Features
 
-The notable features of the Dilated-Residual U-Net:
+The notable features of the RCAN model:
 
-1. **U-Net Architecture**: Enables contextual information capture and spatial detail recovery.
-2. **Dilated Convolutions**: Captures both local and global contextual information.
-3. **Residual Connections**: Efficiently propagates gradients and preserves important features.
-4. **Skip Connections**: Merges high-resolution and low-resolution features to recover fine details.
-5. **Multi-Scale Information Fusion**: Considers information at multiple scales for effective denoising.
+1. **Residual Learning**: RCAN employs residual connections to enable the direct flow of information from input to output.
+2. **Channel Attention**: The RCAM module  dynamically weights the importance of each channel in a feature map, allowing the model to focus on relevant information.
+3. **Multi-scale Processing**: RCAN processes images at different scales by utilizing cascading residual blocks.
 
 # Environment Requirements
 
@@ -75,7 +70,7 @@ Follow the [Quick Start guide](../../../README.md#quick-start) in the main Model
 ## Structure
 
 ```text
-pt_DRUNet                     # model name 
+tf_RCAN                       # model name 
 ├── artifacts                 # artifacts - will be created during the inference process
 │ ├── inference               # folder with results values of inference and evaluation
 │ │ ├── performance           # model productivity measurements
@@ -116,64 +111,6 @@ Use the following script:
   bash scripts/quality.sh /workspace/Vitis-AI-Library/samples/rcan/images/ $MODEL_FOLDER/artifacts/inference/results/
 ```
 
-## Comparison
-
-- Original paper results of mean PNSR metric: <br>
-  <table style="undefined;table-layout: fixed; width: 472px">
-    <colgroup>
-    <col style="width: 59.444444px">
-    <col style="width: 46.444444px">
-    <col style="width: 77.444444px">
-    <col style="width: 49.444444px">
-    <col style="width: 62.444444px">
-    <col style="width: 55.444444px">
-    <col style="width: 60.444444px">
-    <col style="width: 60.444444px">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Dataset</th>
-        <th>Noise<br>level</th>
-        <th>DRUNet</th>
-        <th><a href="https://github.com/Ding-Liu/NLRN" target="_blank" rel="noopener noreferrer">NLRN</a></th>
-        <th><a href="https://github.com/hsijiaxidian/FOCNet" target="_blank" rel="noopener noreferrer">FOCNet</a></th>
-        <th><a href="https://github.com/cszn/IRCNN" target="_blank" rel="noopener noreferrer">IRCNN</a></th>
-        <th><a href="https://github.com/cszn/FFDNet" target="_blank" rel="noopener noreferrer">FFDNet</a></th>
-        <th><a href="https://github.com/cszn/DnCNN" target="_blank" rel="noopener noreferrer">DnCNN</a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowspan="3">BSD68</td>
-        <td>15</td>
-        <td>31.91</td>
-        <td>31.88</td>
-        <td>31.83</td>
-        <td>31.63</td>
-        <td>31.63</td>
-        <td>31.73</td>
-      </tr>
-      <tr>
-        <td>25</td>
-        <td>29.48</td>
-        <td>29.41</td>
-        <td>29.38</td>
-        <td>29.15</td>
-        <td>29.19</td>
-        <td>29.23</td>
-      </tr>
-      <tr>
-        <td>50</td>
-        <td>26.59</td>
-        <td>26.47</td>
-        <td>26.50</td>
-        <td>26.19</td>
-        <td>26.29</td>
-        <td>26.23</td>
-      </tr>
-    </tbody>
-    </table>
-
 # Performance
 
 - You can profile the model using [vaitrace](https://docs.xilinx.com/r/en-US/ug1414-vitis-ai/Starting-a-Simple-Trace-with-vaitrace) perfomance report,
@@ -187,7 +124,7 @@ Use the following script:
   # Alternatively, you can pass --dataset option with the folder where images are stored.
   # Example:
 
-  bash scripts/performance.sh $MODEL_FOLDER/artifacts/models/drunet_pt/drunet_pt.xmodel --dataset /workspace/Vitis-AI-Library/samples/rcan/images/
+  bash scripts/performance.sh $MODEL_FOLDER/artifacts/models/rcan_pruned_tf/rcan_pruned_tf.xmodel --dataset /workspace/Vitis-AI-Library/samples/rcan/images/
   ```
 
 

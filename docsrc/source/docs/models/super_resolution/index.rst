@@ -5,6 +5,6 @@ Super Resolution models
 
 .. toctree::
 
-    DRUNet <DRUNet>
+    RCAN <RCAN>
     OFA-RCAN <OFA_RCAN>
     SESR-S <SESR_S>
