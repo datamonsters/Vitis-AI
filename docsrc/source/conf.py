@@ -108,7 +108,7 @@ source_suffix = {
 source_parsers = {
     '.md': CommonMarkParser,
 	# myst_parser testing
-	#'.md': 
+	#'.md':
 }
 
 # The master toctree document.
