@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -87,6 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Model Zoo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-zoo.html">Pre-trained, Optimized Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started-model-zoo.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models-overview.html">Models overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Model Development</span></p>
 <ul>
@@ -154,18 +155,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="vitis-ai-a-brief-introduction">
-<h1>Vitis AI - A Brief Introduction<a class="headerlink" href="#vitis-ai-a-brief-introduction" title="Permalink to this heading">¶</a></h1>
+<h1>Vitis AI - A Brief Introduction<a class="headerlink" href="#vitis-ai-a-brief-introduction" title="Permalink to this headline">¶</a></h1>
 <p>The page intends to briefly introduce each component of the Vitis™ AI workflow and provide a unified landing page that will assist developers in navigating to key resources for each stage in the workflow.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Review this entire Vitis AI HTML documentation as a first step on your journey with Vitis AI. On these pages, you will find vital information that will help to augment the formal user and product guides.</p>
 </div>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <p>Vitis AI documentation has formal product and user guides, task-specific resources, and examples. Additional task-specific resources and examples are encapsulated in the various sections of this documentation repository. The formal documentation is listed in  <a class="reference internal" href="reference/release_documentation.html"><span class="doc">Release Documentation</span></a>.</p>
 </section>
 <section id="new-users">
-<h2>New Users<a class="headerlink" href="#new-users" title="Permalink to this heading">¶</a></h2>
+<h2>New Users<a class="headerlink" href="#new-users" title="Permalink to this headline">¶</a></h2>
 <p>So, you are a new user wondering where to start. In general, there are two primary starting points. Most users will want to start by installing the toolchain or doing a “test drive.” Xilinx recommends that all users start with a “test drive” and then move on to the installation of the tools. The two workflows are as follows:</p>
 <figure class="align-default" id="id1">
 <img alt="../_images/New_User_Flow.PNG" src="../_images/New_User_Flow.PNG" />
@@ -175,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 </section>
 <section id="what-is-a-dpu">
-<h2>What is a DPU?<a class="headerlink" href="#what-is-a-dpu" title="Permalink to this heading">¶</a></h2>
+<h2>What is a DPU?<a class="headerlink" href="#what-is-a-dpu" title="Permalink to this headline">¶</a></h2>
 <p>Xilinx uses the acronym D-P-U to identify soft accelerators that target deep-learning inference. These “<strong>D</strong> eep Learning <strong>P</strong> rocessing <strong>U</strong> nits” are a vital component of the Vitis AI solution. This (perhaps overloaded) term can refer to one of several potential accelerator architectures covering multiple network topologies.</p>
 <p>A DPU comprises elements available in the Xilinx programmable logic fabric, such as DSP, BlockRAM, UltraRAM, LUTs, and Flip-Flops, or may be developed as a set of microcoded functions that are deployed on the Xilinx AI Engine, or “AI Engine” architecture. Furthermore, in the case of some applications, the DPU is likely to be comprised of programmable logic and AI Engine array resources.</p>
 <p>An example of the DPUCZ, targeting Zynq® Ultrascale+™ devices is displayed in the following image:</p>
@@ -197,14 +198,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>One advantage of this architecture is that there is no need to load a new bitstream or build a new hardware platform while changing the network.  This is an important differentiator from Data Flow accelerator architectures that are purpose-built for a single network.  That said, both the Matrix of Processing Engines and Data Flow architectures have a place in Xilinx designs.  If you need a highly optimized, specialized Data Flow accelerator for inference, refer to the <a class="reference external" href="https://xilinx.github.io/finn/">FINN &amp; Brevitas</a> solutions.  Data Flow architectures based on FINN can support inference at line rates for high-speed communications and extremely high sample rates for inference in the RF domain.  Neither of these two applications is a great fit for Vitis AI.  The reality is that both of these flows are complementary, and support for both can play an essential role in customer product differentiation and future-proofing.</p>
 </section>
 <section id="test-drive-vitis-ai-on-a-supported-platform">
-<h2>Test-Drive Vitis AI on a Supported Platform<a class="headerlink" href="#test-drive-vitis-ai-on-a-supported-platform" title="Permalink to this heading">¶</a></h2>
+<h2>Test-Drive Vitis AI on a Supported Platform<a class="headerlink" href="#test-drive-vitis-ai-on-a-supported-platform" title="Permalink to this headline">¶</a></h2>
 <p>In the early stages of evaluation, it is recommended that developers obtain and leverage a supported Vitis AI target platform. Several Xilinx evaluation platforms are directly supported with pre-built SD card images that enable the developer to evaluate the Vitis AI workflow. Because these images are ready-to-use, there is no immediate need for
 the developer to master the integration of the DPU IP. This path provides an excellent starting point for software or data science-centric developers.</p>
 <p>To get started, you must know which platform you plan to target. New users should consult with a local FAE or ML Specialist, review the DPU product guides, review the target platform documentation, and finally, review the <a class="reference internal" href="workflow-model-zoo.html"><span class="doc">Vitis AI Model Zoo</span></a> performance metrics.</p>
 </section>
 <section id="supported-evaluation-targets">
-<h2>Supported Evaluation Targets<a class="headerlink" href="#supported-evaluation-targets" title="Permalink to this heading">¶</a></h2>
-<table class="docutils align-default">
+<h2>Supported Evaluation Targets<a class="headerlink" href="#supported-evaluation-targets" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 70%" />
@@ -236,7 +237,7 @@ the developer to master the integration of the DPU IP. This path provides an exc
 <p>Once the “test drive” of the hardware platform is complete, Xilinx recommends reviewing this documentation to become more familiar with the components of Vitis AI.</p>
 </section>
 <section id="version-compatibility">
-<h2>Version Compatibility<a class="headerlink" href="#version-compatibility" title="Permalink to this heading">¶</a></h2>
+<h2>Version Compatibility<a class="headerlink" href="#version-compatibility" title="Permalink to this headline">¶</a></h2>
 <p>Vitis AI v3.0 and the DPU IP released with the v3.0 branch of this repository are verified as compatible with Vitis, Vivado®, and PetaLinux version 2022.2. If you are using a previous release of Vitis AI, you should review the <a class="reference internal" href="reference/version_compatibility.html"><span class="doc">IP and Tool Version Compatibility</span></a> for that release.</p>
 </section>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -79,6 +78,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Model Zoo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-zoo.html">Pre-trained, Optimized Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started-model-zoo.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models-overview.html">Models overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Model Development</span></p>
 <ul>
@@ -152,9 +153,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="deploying-a-model">
-<h1>Deploying a Model<a class="headerlink" href="#deploying-a-model" title="Permalink to this heading">¶</a></h1>
+<h1>Deploying a Model<a class="headerlink" href="#deploying-a-model" title="Permalink to this headline">¶</a></h1>
 <section id="workflow-for-deploying-a-model">
-<h2>Workflow for Deploying a Model<a class="headerlink" href="#workflow-for-deploying-a-model" title="Permalink to this heading">¶</a></h2>
+<h2>Workflow for Deploying a Model<a class="headerlink" href="#workflow-for-deploying-a-model" title="Permalink to this headline">¶</a></h2>
 <p>Once you have successfully quantized and compiled your model for a specific DPU, the next task is to deploy that model on the target. Follow these steps in this process:</p>
 <ol class="arabic simple">
 <li><p>Test your model and application software on one of the Xilinx® platforms for which a pre-built DPU image is provided. Ideally, this would be the platform and DPU that closely matches your final production deployment.</p></li>
@@ -175,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
 <section id="embedded-versus-data-center-workflows">
-<h2>Embedded versus Data Center Workflows<a class="headerlink" href="#embedded-versus-data-center-workflows" title="Permalink to this heading">¶</a></h2>
+<h2>Embedded versus Data Center Workflows<a class="headerlink" href="#embedded-versus-data-center-workflows" title="Permalink to this headline">¶</a></h2>
 <p>The Vitis AI workflow is largely unified for Embedded and Data Center applications but diverges at the deployment stage. There are various reasons for this divergence, including the following:</p>
 <ul class="simple">
 <li><p>Zynq® Ultrascale+™, Kria™, and Versal® SoC applications leverage the on-chip processor subsystem (APU) as the host control node for model deployment. Considering optimization and <a class="reference internal" href="workflow-system-integration.html#whole-application-acceleration"><span class="std std-ref">Whole Application Acceleration</span></a> of subgraphs deployed on the SoC APU is crucial.</p></li>
@@ -186,7 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="vitis-ai-library">
-<h2>Vitis AI Library<a class="headerlink" href="#vitis-ai-library" title="Permalink to this heading">¶</a></h2>
+<h2>Vitis AI Library<a class="headerlink" href="#vitis-ai-library" title="Permalink to this headline">¶</a></h2>
 <p>The Vitis AI Library provides you with a head-start on model deployment. While it is possible for developers to directly leverage the Vitis AI Runtime APIs to deploy a model on Xilinx platforms, it is often more beneficial to start with a ready-made example that incorporates the various elements of a typical application, including:</p>
 <ul class="simple">
 <li><p>Simplified CPU-based pre and post-processing implementations.</p></li>
@@ -206,7 +207,7 @@ Tutorials</a> will offer an excellent starting point.</p>
 </ul>
 </section>
 <section id="vitis-ai-runtime">
-<h2>Vitis AI Runtime<a class="headerlink" href="#vitis-ai-runtime" title="Permalink to this heading">¶</a></h2>
+<h2>Vitis AI Runtime<a class="headerlink" href="#vitis-ai-runtime" title="Permalink to this headline">¶</a></h2>
 <p>The Vitis AI Runtime (VART) is a set of API functions that support the integration of the DPU into software applications. VART provides a unified high-level runtime for both Data Center and Embedded targets. Key features of the Vitis AI Runtime API are:</p>
 <ul class="simple">
 <li><p>Asynchronous submission of jobs to the DPU.</p></li>

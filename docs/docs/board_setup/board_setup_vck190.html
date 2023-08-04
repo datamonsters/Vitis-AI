@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -77,6 +76,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Model Zoo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../workflow-model-zoo.html">Pre-trained, Optimized Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started-model-zoo.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models-overview.html">Models overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Model Development</span></p>
 <ul>
@@ -144,13 +145,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="setting-up-the-versal-vck190">
-<h1>Setting up the Versal VCK190<a class="headerlink" href="#setting-up-the-versal-vck190" title="Permalink to this heading">¶</a></h1>
+<h1>Setting up the Versal VCK190<a class="headerlink" href="#setting-up-the-versal-vck190" title="Permalink to this headline">¶</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This directory contains instructions for running DPUCVDX8G on Versal™ AI Core targets. <strong>DPUCVDX8G</strong> is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks.</p>
 </section>
 <section id="step-1-setup-cross-compiler">
-<h2>Step 1: Setup Cross-compiler<a class="headerlink" href="#step-1-setup-cross-compiler" title="Permalink to this heading">¶</a></h2>
+<h2>Step 1: Setup Cross-compiler<a class="headerlink" href="#step-1-setup-cross-compiler" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Perform these steps this on your local host Linux operating system (not inside the docker container). By default, the cross compiler will be installed in <code class="docutils literal notranslate"><span class="pre">~/petalinux_sdk_2022.2</span></code>.</p>
@@ -174,7 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 </section>
 <section id="step-2-setup-the-target">
-<h2>Step 2: Setup the Target<a class="headerlink" href="#step-2-setup-the-target" title="Permalink to this heading">¶</a></h2>
+<h2>Step 2: Setup the Target<a class="headerlink" href="#step-2-setup-the-target" title="Permalink to this headline">¶</a></h2>
 <p>The Vitis AI Runtime packages, VART samples, Vitis-AI-Library samples, and models are built into the board image, enhancing the user experience. Therefore, the user need not install Vitis AI Runtime packages and model packages on the board separately. However, following these steps, the users can still install the model or Vitis AI Runtime on their image or on the official image.</p>
 <ol class="arabic">
 <li><p>Installing a Board Image.</p>
@@ -244,11 +245,11 @@ cp resnet50 /usr/share/vitis_ai_library/models -r
 </ol>
 </section>
 <section id="step-3-run-the-vitis-ai-examples">
-<h2>Step 3: Run the Vitis AI Examples<a class="headerlink" href="#step-3-run-the-vitis-ai-examples" title="Permalink to this heading">¶</a></h2>
+<h2>Step 3: Run the Vitis AI Examples<a class="headerlink" href="#step-3-run-the-vitis-ai-examples" title="Permalink to this headline">¶</a></h2>
 <p>Refer to <a class="reference internal" href="board_setup_mpsoc.html#mpsoc-run-vitis-ai-examples"><span class="std std-ref">Step 3: Run the Vitis AI Examples</span></a> to run Vitis AI examples.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.xilinx.com/html_docs/vitis_ai/3_0/index.html">Vitis AI User Guide</a></p></li>
 </ul>

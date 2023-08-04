@@ -1,7 +1,8 @@
 .. _models_overview:
-================
+
+================================
 Vitis AI Model Zoo models
-================
+================================
 
 .. toctree::
 
@@ -10,4 +11,5 @@ Vitis AI Model Zoo models
     Object detection <models/object_detection/index>
     Segmentation <models/segmentation/index>
     Super resolution <models/super_resolution/index>
+
 

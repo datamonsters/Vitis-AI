@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -102,6 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Model Zoo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../workflow-model-zoo.html">Pre-trained, Optimized Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started-model-zoo.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models-overview.html">Models overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Model Development</span></p>
 <ul>
@@ -169,9 +170,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="release-notes-3-0">
-<h1>Release Notes 3.0<a class="headerlink" href="#release-notes-3-0" title="Permalink to this heading">¶</a></h1>
+<h1>Release Notes 3.0<a class="headerlink" href="#release-notes-3-0" title="Permalink to this headline">¶</a></h1>
 <section id="documentation-and-github-repository">
-<h2>Documentation and Github Repository<a class="headerlink" href="#documentation-and-github-repository" title="Permalink to this heading">¶</a></h2>
+<h2>Documentation and Github Repository<a class="headerlink" href="#documentation-and-github-repository" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Migrated core documentation to <a class="reference external" href="https://xilinx.github.io/Vitis-AI/">Github.IO</a>.</p></li>
 <li><p>Incorporated offline HTML documentation for air-gapped users.</p></li>
@@ -180,13 +181,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="docker-containers-and-gpu-support">
-<h2>Docker Containers and GPU Support<a class="headerlink" href="#docker-containers-and-gpu-support" title="Permalink to this heading">¶</a></h2>
+<h2>Docker Containers and GPU Support<a class="headerlink" href="#docker-containers-and-gpu-support" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Migrated from multi-framework to per framework Docker containers.</p></li>
 <li><p>Enabled Docker ROCm GPU support for quantization and pruning.</p></li>
 </ul>
 <section id="model-zoo">
-<h3>Model Zoo<a class="headerlink" href="#model-zoo" title="Permalink to this heading">¶</a></h3>
+<h3>Model Zoo<a class="headerlink" href="#model-zoo" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Updated Model Zoo with commentary regarding dataset licensing restrictions</p></li>
 <li><p>Added 14 new models and deprecated 28 models for a total of 130 models</p></li>
@@ -206,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="tensorflow-2-cnn-quantizer">
-<h3>TensorFlow 2 CNN Quantizer<a class="headerlink" href="#tensorflow-2-cnn-quantizer" title="Permalink to this heading">¶</a></h3>
+<h3>TensorFlow 2 CNN Quantizer<a class="headerlink" href="#tensorflow-2-cnn-quantizer" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Based on TensorFlow 2.10</p></li>
 <li><p>Updated the Model Inspector to for improved accuracy of partitioning results expected from the DPU compiler.</p></li>
@@ -221,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="tensorflow-1-cnn-quantizer">
-<h3>TensorFlow 1 CNN Quantizer<a class="headerlink" href="#tensorflow-1-cnn-quantizer" title="Permalink to this heading">¶</a></h3>
+<h3>TensorFlow 1 CNN Quantizer<a class="headerlink" href="#tensorflow-1-cnn-quantizer" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Separated the quantizer code from the TensorFlow code, making it a plug-in module to the official TensorFlow code base.</p></li>
 <li><p>Added support for exporting quantized ONNX format models (to support the ONNX Runtime).</p></li>
@@ -234,7 +235,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="pytorch-cnn-quantizer">
-<h3>PyTorch CNN Quantizer<a class="headerlink" href="#pytorch-cnn-quantizer" title="Permalink to this heading">¶</a></h3>
+<h3>PyTorch CNN Quantizer<a class="headerlink" href="#pytorch-cnn-quantizer" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Support PyTorch 1.11 and 1.12.</p></li>
 <li><p>Support exporting torch script format quantized model.</p></li>
@@ -248,7 +249,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="compiler">
-<h3>Compiler<a class="headerlink" href="#compiler" title="Permalink to this heading">¶</a></h3>
+<h3>Compiler<a class="headerlink" href="#compiler" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Added support for new operators, including: strided_slice, cost volume, correlation 1D &amp; 2D, argmax, group conv2d, reduction_max, reduction_mean</p></li>
 <li><p>Added support for Versal™ AIE-ML architectures DPUCV2DX8G (V70 and Versal AI Edge)</p></li>
@@ -256,7 +257,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="pytorch-optimizer">
-<h3>PyTorch Optimizer<a class="headerlink" href="#pytorch-optimizer" title="Permalink to this heading">¶</a></h3>
+<h3>PyTorch Optimizer<a class="headerlink" href="#pytorch-optimizer" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Added support for fine-grained model pruning (sparsity)</p></li>
 <li><p>OFA support for convolution layers with kernel sizes = (1,3) and dialation</p></li>
@@ -268,7 +269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="tensorflow-2-optimizer">
-<h3>TensorFlow 2 Optimizer<a class="headerlink" href="#tensorflow-2-optimizer" title="Permalink to this heading">¶</a></h3>
+<h3>TensorFlow 2 Optimizer<a class="headerlink" href="#tensorflow-2-optimizer" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Added support for Keras ConvTranspose2D, Conv3D, ConvTranspose3D</p></li>
 <li><p>Added support TFOpLambda operator</p></li>
@@ -278,7 +279,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="runtime-and-library">
-<h3>Runtime and Library<a class="headerlink" href="#runtime-and-library" title="Permalink to this heading">¶</a></h3>
+<h3>Runtime and Library<a class="headerlink" href="#runtime-and-library" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Added support for Versal AI Edge VEK280 evaluation kit and Alveo™ V70 accelerator cards (Early Access)</p></li>
 <li><p>Added support for ONNX runtime, with eleven ONNX-specific examples</p></li>
@@ -287,14 +288,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="profiler">
-<h3>Profiler<a class="headerlink" href="#profiler" title="Permalink to this heading">¶</a></h3>
+<h3>Profiler<a class="headerlink" href="#profiler" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Added Profiler support for DPUCV2DX8G (VEK280 Early Access)</p></li>
 <li><p>Added Profiler support for Versal DDR bandwidth profiling</p></li>
 </ul>
 </section>
 <section id="dpu-ip-zynq-ultrascale-dpuczdx8g">
-<h3>DPU IP - Zynq Ultrascale+ DPUCZDX8G<a class="headerlink" href="#dpu-ip-zynq-ultrascale-dpuczdx8g" title="Permalink to this heading">¶</a></h3>
+<h3>DPU IP - Zynq Ultrascale+ DPUCZDX8G<a class="headerlink" href="#dpu-ip-zynq-ultrascale-dpuczdx8g" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Upgraded to enable Vivado™ and Vitis 2022.2 release</p></li>
 <li><p>Added support for 1D and 2D Correlation, Argmax and Max</p></li>
@@ -303,7 +304,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="dpu-ip-versal-aie-targets-dpucvdx8g">
-<h3>DPU IP - Versal AIE Targets DPUCVDX8G<a class="headerlink" href="#dpu-ip-versal-aie-targets-dpucvdx8g" title="Permalink to this heading">¶</a></h3>
+<h3>DPU IP - Versal AIE Targets DPUCVDX8G<a class="headerlink" href="#dpu-ip-versal-aie-targets-dpucvdx8g" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Upgraded to enable Vivado and Vitis 2022.2 release</p></li>
 <li><p>Added support for 1D and 2D Correlation</p></li>
@@ -314,7 +315,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="dpu-ip-versal-aie-ml-targets-dpucv2dx8g-versal-ai-edge">
-<h3>DPU IP - Versal AIE-ML Targets DPUCV2DX8G (Versal AI Edge)<a class="headerlink" href="#dpu-ip-versal-aie-ml-targets-dpucv2dx8g-versal-ai-edge" title="Permalink to this heading">¶</a></h3>
+<h3>DPU IP - Versal AIE-ML Targets DPUCV2DX8G (Versal AI Edge)<a class="headerlink" href="#dpu-ip-versal-aie-ml-targets-dpucv2dx8g-versal-ai-edge" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Early access release supporting early adopters with an early, unoptimized AIE-ML DPU</p></li>
 <li><p>Supports most 2D operators (currently does not support 3D operators)</p></li>
@@ -323,14 +324,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="dpu-ip-cnn-alveo-data-center-dpucvdx8h">
-<h3>DPU IP - CNN - Alveo Data Center DPUCVDX8H<a class="headerlink" href="#dpu-ip-cnn-alveo-data-center-dpucvdx8h" title="Permalink to this heading">¶</a></h3>
+<h3>DPU IP - CNN - Alveo Data Center DPUCVDX8H<a class="headerlink" href="#dpu-ip-cnn-alveo-data-center-dpucvdx8h" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Upgraded to enable Vitis 2022.2 release</p></li>
 <li><p>Timing closure improvements via scripts supplied for .xo workflows</p></li>
 </ul>
 </section>
 <section id="dpu-ip-cnn-v70-data-center-dpucv2dx8g">
-<h3>DPU IP - CNN - V70 Data Center DPUCV2DX8G<a class="headerlink" href="#dpu-ip-cnn-v70-data-center-dpucv2dx8g" title="Permalink to this heading">¶</a></h3>
+<h3>DPU IP - CNN - V70 Data Center DPUCV2DX8G<a class="headerlink" href="#dpu-ip-cnn-v70-data-center-dpucv2dx8g" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Early access release supporting early adopters with an unoptimized DPU</p></li>
 <li><p>Supports most 2D operators (currently does not support 3D operators)</p></li>
@@ -339,13 +340,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </section>
 <section id="legacy-alveo-dpu-support">
-<h3>Legacy Alveo DPU Support<a class="headerlink" href="#legacy-alveo-dpu-support" title="Permalink to this heading">¶</a></h3>
+<h3>Legacy Alveo DPU Support<a class="headerlink" href="#legacy-alveo-dpu-support" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Vitis AI support for the DPUCAHX8H/DPUCAHX8H-DWC IP, and Alveo™ U50LV and U55C cards was discontinued with the release of Vitis AI 3.0. The final release to support these targets was Vitis AI 2.5.0.</p></li>
 </ul>
 </section>
 <section id="wego">
-<h3>WeGO<a class="headerlink" href="#wego" title="Permalink to this heading">¶</a></h3>
+<h3>WeGO<a class="headerlink" href="#wego" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Integrated WeGO with the Vitis-AI Quantizer to enable on-the-fly quantization and improve easy-of-use</p></li>
 <li><p>Introduced serialization and deserialization with the WeGO flow to offer the capability of building once and running anytime</p></li>
@@ -355,7 +356,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 </section>
 <section id="known-issues">
-<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading">¶</a></h2>
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Bitstream loading error occurs when the AIE-ML DPU application running on the VEK280 kit is interrupted manually</p></li>
 <li><p>HDMI not functional for the early access VEK280 image. The issue will be fixed in the next release</p></li>

@@ -37,9 +37,6 @@ def main():
 
     Usage: python evaluate_segmentation.py <segmented_filepath> <groundtruth_filepath>
 
-    Example:
-        python evaluate_segmentation.py path/to/segmented.nii.gz path/to/groundtruth.nii.gz
-
     The script calculates the Intersection over Union (IoU) score for 3D segmentation evaluation
     using the provided segmented file and ground truth file as arguments.
     """
