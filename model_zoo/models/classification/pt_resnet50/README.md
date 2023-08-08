@@ -57,8 +57,8 @@ which places batch normalization and ReLU activation before each convolutional l
 # Environment Requirements
 
 Before running the model inference, make sure that the latest version of
-[Vitis-AI](https://xilinx.github.io/Vitis-AI/docs/install/install.html) is installed and the host computer fully supports
-Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Xilinx VCK5000 Versal.
+[Vitis-AI](https://xilinx.github.io/Vitis-AI/3.5/html/docs/install/install.html) is installed and the host computer fully supports
+Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Alveo V70.
 
 # Quick Start
 

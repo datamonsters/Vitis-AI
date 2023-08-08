@@ -50,9 +50,9 @@ Vitis-AI/model_zoo
 
 1. Before starting, make sure that the host computer fully supports Xilinx FPGA/ACAP and the appropriate accelerator
 is installed correctly, e.g.
-[Xilinx VCK5000 Versal](https://xilinx.github.io/Vitis-AI/docs/board_setup/board_setup_vck5000.html).
+[Alveo V70](https://xilinx.github.io/Vitis-AI/3.5/html/docs/quickstart/v70.html).
 Or you can use an already configured server on [vmaccel.com](https://www.vmaccel.com/).
-2. Install the latest [Vitis-AI](https://xilinx.github.io/Vitis-AI/docs/install/install.html).
+2. Install the latest [Vitis-AI](https://xilinx.github.io/Vitis-AI/3.5/html/docs/install/install.html).
 3. Go to the Vitis-AI repo: 
     ```
     # cd <Vitis-AI install path>/Vitis-AI

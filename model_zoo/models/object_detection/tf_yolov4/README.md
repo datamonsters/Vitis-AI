@@ -53,8 +53,8 @@ The notable features of the YOLO model:
 # Environment Requirements
 
 Before running the model inference, make sure that the latest version of
-[Vitis-AI](https://xilinx.github.io/Vitis-AI/docs/install/install.html) is installed and the host computer fully supports
-Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Xilinx VCK5000 Versal.
+[Vitis-AI](https://xilinx.github.io/Vitis-AI/3.5/html/docs/install/install.html) is installed and the host computer fully supports
+Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Alveo V70.
 
 # Quick Start
 
@@ -137,4 +137,3 @@ Use the following script:
 # Vitis AI Model Zoo Homepage
 
 Check the official Vitis AI Model Zoo [homepage](https://github.com/Xilinx/Vitis-AI/tree/master/model_zoo).
-s

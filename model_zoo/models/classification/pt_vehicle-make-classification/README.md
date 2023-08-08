@@ -52,8 +52,8 @@ The notable features of the model:
 # Environment Requirements
 
 Before running the model inference, make sure that the latest version of
-[Vitis-AI](https://xilinx.github.io/Vitis-AI/docs/install/install.html) is installed and the host computer fully supports
-Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Xilinx VCK5000 Versal.
+[Vitis-AI](https://xilinx.github.io/Vitis-AI/3.5/html/docs/install/install.html) is installed and the host computer fully supports
+Xilinx FPGA/ACAP and the appropriate accelerator is installed correctly, e.g. Alveo V70.
 
 # Quick Start
 
@@ -133,7 +133,6 @@ Use the following script:
 - CompCars dataset: http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/
 - EfficientNet-EdgeTPU: Creating Accelerator-Optimized Neural Networks with AutoML.
 Google Research blog post: https://ai.googleblog.com/2019/08/efficientnet-edgetpu-creating.html
-
 - Going deeper with convolutions (Inception): https://arxiv.org/pdf/1409.4842
 - Benchmark on the CompCars (PapersWithCode): https://paperswithcode.com/dataset/compcars
 
